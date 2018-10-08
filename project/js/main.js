@@ -139,5 +139,135 @@ switch (a) {
 }
 */
 
+/*function showMessage(from, text) {
+  text = text || 'текст не передан';
+ 
+  alert( from + ": " + text );
+}
+
+showMessage("Маша", "Привет!"); // Маша: Привет!
+showMessage("Маша"); // Маша: текст не передан
+*/
+
+/*
+function checkAge(age) {
+  return (age > 18) ? true : confirm('Родители разрешили?');
+}
+
+function checkAge(age) {
+	return(age > 18) || confirm('Родители разрешили?');
+}
+*/
+
+/*
+function returnMin(var a, var b){
+ if (a>b){ 
+ 	return b;
+ } else {
+ 	return a;
+ }
+}
+*/
+
+/*
+function pow(x,n){
+	var pr=x;
+	for (var i=1; i<n; i++){
+		pr*=x;
+	}
+	return pr;
+}
+
+var x = prompt("x?",);
+var n = prompt("n?",);
+
+if (n<=1){
+	alert("данная степень не поддерживается, введите n>1");
+	}else{
+		alert(pow(x,n));
+	}
+*/
+
+/*
+function sayHi() {
+  alert( "Hi" );
+}
+
+alert( sayHi ); 
+*/
 
 
+/*function sayHi() {   // (1)
+  alert( "Привет" );
+}
+
+var func = sayHi;    // (2)
+func(); // Привет    // (3)
+
+sayHi = null;
+sayHi();             // ошибка (4)
+*/
+
+
+/*
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  function() { alert("Вы согласились."); },
+  function() { alert("Вы отменили выполнение."); }
+); 
+*/
+
+/*
+var sum = new Function('a,b', ' return a+b; ');
+
+var result = sum(1, 2);
+alert( result ); // 3
+*/
+
+
+/*
+function pow(x,n){
+	if (n!=1){
+		return x*pow(x,n-1);
+	} else{
+		return x;
+	}
+}
+
+alert(pow(2,5));
+*/
+
+/*
+function sumTo(n) {
+  if (n == 1) return 1;
+  return n + sumTo(n - 1);
+}
+
+
+alert(sumTo(100));
+*/
+
+/*
+function factorial(n){
+	if (n!=1){
+		return n*factorial(n-1);
+	} else {
+		return 1;
+	}
+}
+
+function factorial(n) {
+  return (n != 1) ? n * factorial(n - 1) : 1;
+}
+
+alert(factorial(4));
+*/
+
+function fib(n){
+	
+}
