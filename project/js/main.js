@@ -268,8 +268,37 @@ function factorial(n) {
 alert(factorial(4));
 */
 
+/*
 function fib(n) {
   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
 }
 
 alert(fib(7));
+*/
+
+/*
+var f = function factorial(n) {
+  return n ? n*factorial(n-1) : 1;
+};
+
+var g = f;  // скопировали ссылку на функцию-факториал в g
+f = null;
+
+alert( g(5) ); // 120, работает!
+*/
+
+/*
+function g() { return 1; }
+
+alert(g); //выводит код функции
+*/
+
+/*
+var f = function sayHi(name) {
+  alert( sayHi ); // изнутри функции - видно (выведет код функции)
+};
+
+alert( sayHi ); // снаружи - не видно (ошибка: undefined variable 'sayHi')
+*/
+
+
