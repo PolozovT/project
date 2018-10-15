@@ -301,4 +301,3 @@ var f = function sayHi(name) {
 alert( sayHi ); // снаружи - не видно (ошибка: undefined variable 'sayHi')
 */
 
-
