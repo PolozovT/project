@@ -46,6 +46,8 @@ var namejs = prompt("Официальное название js?", "");
 if (namejs == "EcmaScript") alert("Good")
 	else alert("no...");
 */
+
+
 /*
 var admin = prompt("Кто пришел?", "");
 
@@ -58,7 +60,10 @@ if (admin == "админ") {
     else if (admin == null) alert ("вход отменен");
 	else alert("я вас не знаю");
 
-result = (a+b < 4) ? "malo": "mnogo";*/
+result = (a+b < 4) ? "malo": "mnogo";
+*/
+
+
 /*
 var director = prompt('Введите login', "");
 
@@ -73,6 +78,7 @@ if (!(ages>=14&&ages<=90)) alert("klevo");
 
 */
 
+
 /*
 var i = 2;
 for (; i<=10; i++){
@@ -82,6 +88,7 @@ for (; i<=10; i++){
 }
 */
 
+
 /*
 var i = 0;
 while ( i < 3) {
@@ -89,6 +96,7 @@ while ( i < 3) {
   i++;
 }
 */
+
 
 /*
 var ch;
@@ -108,6 +116,7 @@ for (var i = 1; i<10; i++){
 }
 */
 
+
 /*
 var browser = prompt("Введите ваш браузер");
 
@@ -119,6 +128,7 @@ if (browser=='IE') {
     else{
     alert( 'Мы надеемся, что и в вашем браузере все ок!' );}
 */
+
 
 /*
 var a = +prompt('a?', '');
@@ -139,7 +149,9 @@ switch (a) {
 }
 */
 
-/*function showMessage(from, text) {
+
+/*
+function showMessage(from, text) {
   text = text || 'текст не передан';
  
   alert( from + ": " + text );
@@ -148,6 +160,7 @@ switch (a) {
 showMessage("Маша", "Привет!"); // Маша: Привет!
 showMessage("Маша"); // Маша: текст не передан
 */
+
 
 /*
 function checkAge(age) {
@@ -159,6 +172,7 @@ function checkAge(age) {
 }
 */
 
+
 /*
 function returnMin(var a, var b){
  if (a>b){ 
@@ -168,6 +182,7 @@ function returnMin(var a, var b){
  }
 }
 */
+
 
 /*
 function pow(x,n){
@@ -188,6 +203,7 @@ if (n<=1){
 	}
 */
 
+
 /*
 function sayHi() {
   alert( "Hi" );
@@ -197,7 +213,8 @@ alert( sayHi );
 */
 
 
-/*function sayHi() {   // (1)
+/*
+function sayHi() {   // (1)
   alert( "Привет" );
 }
 
@@ -222,6 +239,7 @@ ask(
 ); 
 */
 
+
 /*
 var sum = new Function('a,b', ' return a+b; ');
 
@@ -242,6 +260,7 @@ function pow(x,n){
 alert(pow(2,5));
 */
 
+
 /*
 function sumTo(n) {
   if (n == 1) return 1;
@@ -251,6 +270,7 @@ function sumTo(n) {
 
 alert(sumTo(100));
 */
+
 
 /*
 function factorial(n){
@@ -268,6 +288,7 @@ function factorial(n) {
 alert(factorial(4));
 */
 
+
 /*
 function fib(n) {
   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
@@ -275,6 +296,7 @@ function fib(n) {
 
 alert(fib(7));
 */
+
 
 /*
 var f = function factorial(n) {
@@ -287,11 +309,13 @@ f = null;
 alert( g(5) ); // 120, работает!
 */
 
+
 /*
 function g() { return 1; }
 
 alert(g); //выводит код функции
 */
+
 
 /*
 var f = function sayHi(name) {
@@ -301,3 +325,49 @@ var f = function sayHi(name) {
 alert( sayHi ); // снаружи - не видно (ошибка: undefined variable 'sayHi')
 */
 
+
+/*
+var hello = "Привет";
+
+alert( hello.toUpperCase() );
+
+var str = "Привет, мир!";
+alert( str.length ); // 12
+*/
+
+
+/*
+var n = 12.345;
+
+alert( n.toFixed(2) ); // "12.35"
+alert( n.toFixed(0) ); // "12"
+alert( n.toFixed(5) ); // "12.34500"
+alert(12.toFixed(1)); //ошибка!(уже при комппиляции)
+alert(12..toFixed(1)); //12.0
+*/
+
+
+/*
+var value = prompt("Введите Infinity", 'Infinity');
+
+var number = +value;
+
+alert( number );
+*/
+
+
+/*
+alert( isFinite(1) ); // true
+alert( isFinite(Infinity) ); // false
+alert( isFinite(NaN) ); // false
+*/
+
+alert( +"12test" ); // NaN
+alert( +"  -12" ); // -12
+alert( +" \n34  \n" ); // 34, перевод строки \n является пробельным символом
+alert( +"" ); // 0, пустая строка становится нулем
+alert( +"1 2" ); // NaN, пробел посередине числа - ошибка
+alert( '12.34' / "-2" ); // -6.17
+alert( parseInt('12px') ); // 12
+alert( parseFloat('12.3.4') ) // 12.3, ошибка на второй точке
+alert( parseInt('FF', 16) ); // 255
