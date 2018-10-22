@@ -362,6 +362,8 @@ alert( isFinite(Infinity) ); // false
 alert( isFinite(NaN) ); // false
 */
 
+
+/*
 alert( +"12test" ); // NaN
 alert( +"  -12" ); // -12
 alert( +" \n34  \n" ); // 34, перевод строки \n является пробельным символом
@@ -371,3 +373,85 @@ alert( '12.34' / "-2" ); // -6.17
 alert( parseInt('12px') ); // 12
 alert( parseFloat('12.3.4') ) // 12.3, ошибка на второй точке
 alert( parseInt('FF', 16) ); // 255
+*/
+
+
+/*
+var x = prompt("введите число", "11.1");
+
+if (isNaN(x)) {
+  alert("не число");
+} else {
+  alert("число");
+}
+*/
+
+
+/*
+alert( isNaN(null) ); //  false - не NaN, т.е. "число"
+alert( isNaN("\n  \n") ); //  false - не NaN, т.е. "число"
+*/
+
+
+
+/*
+function numeric(n){
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+*/
+
+
+/*
+var n = 1234567890;
+alert(n.toString(36)); //kf12oi
+*/
+
+
+/*
+alert( Math.floor(3.1) );  // 3
+alert( Math.ceil(3.1) );   // 4
+alert( Math.round(3.1) );  // 3
+*/
+
+
+/*
+alert( ~~12.3 ); // 12
+alert( 12.3 ^ 0 ); // 12
+alert( 1.2 + 1.3 ^ 0 ); // 2, приоритет ^ меньше, чем +
+var x = a * b / c ^ 0; // читается как "a * b / c и округлить"
+*/
+
+
+/*
+var n = 3.466;
+alert(Math.round(n*100)/100); //3.466 -> 346.6 -> 347 -> 3.47
+*/
+
+
+/*
+var n = 12.3463;
+alert(n.toFixed(2));
+alert(+n.toFixed(2)); //именно число
+*/
+
+
+/*
+var price = 6.35;
+
+alert(price.toFixed(1)); //6.3
+alert(Math.round(price*10)/10); //6.4
+*/
+
+
+/*
+alert(0.1 + 0.2 == 0.3); //false
+alert(0.1 + 0.2); //0.30000000000000004
+alert(0.1 + 0.2 > 0.3); //true
+*/
+
+
+/*
+alert(0.1.toFixed(20)); //0.10000000000000000555
+*/
+
+
