@@ -554,4 +554,21 @@ alert(randInt(-5,5));
 */
 
 
+/*
+alert("\u00A9");
+*/
+
+
+/*
+var str = 'I\'m a JavaScript programmer';
+var str = "I'm a JavaScript programmer";
+alert(str);
+*/
+
+
+/*var str = 'simvol\\';
+alert(str);
+alert("\\a");
+*/
+
 
