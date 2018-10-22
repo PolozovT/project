@@ -455,3 +455,103 @@ alert(0.1.toFixed(20)); //0.10000000000000000555
 */
 
 
+/*
+alert ((0.1 * 10 + 0.2 * 10) / 10); //0.3
+*/
+
+
+/*
+var res = 0.1 + 0.2;
+alert(+res.toFixed(10));
+*/
+
+
+/*
+alert( 9999999999999999 ); // выведет 10000000000000000
+*/
+
+
+/*
+var number = 123456789;
+
+alert(number.toLocaleString()); //123 456 789
+*/
+
+
+/*
+var x = +prompt("vvedi x","");
+var y = +prompt("vvedi y","");
+
+alert(x+y);
+*/
+
+
+/*
+alert(6.35.toFixed(1));
+*/
+
+
+/*
+var pr1 = 0.1, pr2 = 0.2;
+alert(+(pr1 + pr2).toFixed(2) + "$");
+*/
+
+
+/*
+var i = 0;
+while(i !=10){
+  i += 0.2;
+  alert(i);
+}
+*/
+
+
+/*
+function fib(n) {
+  var a = 1,
+    b = 0,
+    x;
+  for (i = 0; i < n; i++) {
+    x = a + b;
+    a = b;
+    b = x;
+  }
+  return b;
+}
+
+alert(fib(77));
+*/
+
+
+/*
+function fibBinet(n){
+  var g = (1 + Math.sqrt(5)) / 2;
+  return Math.ceil(Math.pow(g, n) / Math.sqrt(5)); 
+}
+
+alert(fibBinet(77));
+*/
+
+
+/*
+alert(Math.random().toFixed(2));
+*/
+
+
+/*
+var max = 24;
+alert (max*Math.random().toFixed(2));
+*/
+
+
+/*
+function randInt(min, max) {
+var rand = Math.round(min - 0.5 + Math.random()*(max - min - 1));
+return rand;
+}
+
+alert(randInt(-5,5));
+*/
+
+
+
