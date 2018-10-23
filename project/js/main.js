@@ -572,3 +572,207 @@ alert("\\a");
 */
 
 
+/*
+var str = "jQuery";
+alert(str.charAt(0));
+*/
+
+
+/*
+var str = "jQuery";
+alert(str[0]);
+*/
+
+
+/*
+alert("".charAt(0)); // пустая строка
+alert(""[0]); // undefined
+*/
+
+
+/*
+var str = "stroka";
+
+str = str[3] + str[4] + str[5];
+
+alert(str);
+*/
+
+
+/*
+var str = "interface";
+alert(str[0].toUpperCase());
+*/
+
+
+/*
+var str = "abcdefghijklmnop";
+alert(str.indexOf("bcd"));
+*/
+
+
+/*
+var str = "abcdefghijklmnopbcd";
+alert(str.indexOf("bcd", 2));
+alert(str.lastIndexOf("bcd", 2));
+*/
+
+
+/*
+var str = "index";  
+
+if (~str.indexOf("x")){
+  alert("ok");
+}
+
+alert(~2); //~2 = -(2 + 1)
+*/
+
+
+/*
+var str = "osel ia-ia prishel", 
+target = "ia";
+
+var pos = 0;
+while (true){
+  var foundPos = str.indexOf(target, pos);
+  if (foundPos == -1) break;
+
+  alert("нашли на позиции " + foundPos);
+  pos = foundPos + 1;
+}
+
+var pos = -1;
+while ((pos =   str.indexOf(target, pos + 1)) != -1) {
+  alert("нашли на позиции " + pos);
+}
+*/
+
+
+/*
+ var str = "string";
+ alert(str.substring(0,4)); //начало и конец подстроки
+*/
+
+
+/*
+var str = "string";
+alert(str.substr(2,4)); //начало и длина подстроки
+*/
+
+
+/*
+var str = "string";
+alert(str.slice(2,4)); //начало и конец строки(не включительно)
+*/
+
+
+/*
+var str = "string";
+alert(str.substring(-2)); //string; -2 -> 0
+alert(str.slice(-2)); //ng; -2 отсчитывает с конца
+*/
+
+
+/*
+alert(String.fromCharCode(1073));
+alert("string".charCodeAt(2));
+*/
+
+
+/*
+var str;
+for (var i = 1034; i<=1113; i++){
+  str += String.fromCharCode(i);
+}
+
+alert(str);
+*/
+
+
+/*
+var str = "car"; 
+
+alert(str.localeCompare("card")); //-1
+*/
+
+
+/*
+function ucFirst(str){
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+alert(ucFirst("gop"));
+*/
+
+
+/*
+function checkSpam(str) {
+var rez = false;
+strng = str.toLowerCase();
+if ((strng.indexOf("xxx") >= 0) || (strng.indexOf("viagra") >= 0)) rez = true;
+return rez;
+//return !!(~strng.indexOf("xxx") || ~strng.indexOf("viagra"));
+}
+
+alert(checkSpam("xviagrAx"));
+*/
+
+
+
+function truncate(str, maxlength) {
+  if ((!str) || (!maxlength)) return "vvedite vse dannie";
+
+  if (maxlength >= str.length) {
+    len = maxlength - 3;
+    str = str.substr(0,len) + "..."
+  }  
+  return str; 
+}
+
+alert(truncate("dasgfdsfda", 7));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
