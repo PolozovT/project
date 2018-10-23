@@ -726,8 +726,8 @@ function truncate(str, maxlength) {
   if ((!str) || (!maxlength)) return "vvedite vse dannie";
 
   if (maxlength >= str.length) {
-    len = maxlength - 3;
-    str = str.substr(0,len) + "..."
+    var len = maxlength - 4;
+    str = str.substring(0, len) + "...";
   }  
   return str; 
 }
