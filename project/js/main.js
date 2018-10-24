@@ -721,7 +721,7 @@ alert(checkSpam("xviagrAx"));
 */
 
 
-
+/*
 function truncate(str, maxlength) {
   if ((!str) || (!maxlength)) return "vvedite vse dannie";
 
@@ -733,19 +733,54 @@ function truncate(str, maxlength) {
 }
 
 alert(truncate("dasgfdsfda", 7));
+*/
 
 
+//гласные в верхний регистр???
+/*
+var glas = [e, y, u, i, o, a];
+
+function smenaRegistraGlas(str) {
+
+  for (var i = 0; i < (str.length - 1), i++){
+    if (glas.indexOf(srt[i][, fromIndex]) != -1) {
+    return str;
+    }
+  }
+}
+
+alert(smenaRegistraGlas());
+*/
 
 
+/*
+function extractCurrencyValue(str) {
+ return +str.substr(1,);
+}
+
+alert(extractCurrencyValue("$133") + 1);
+*/
 
 
+/*
+o = {}; //пустой объект / o = new Object();
 
+var person = {};
 
+person.name = "Vasya";
+person.age = 25;
 
+alert(person.name + ": " + person.age);
 
+if ("name" in person) {
+  alert ("name exists");
+}
 
+alert(person.lalala);
 
-
+alert(person.lalala === undefined); //true
+alert(person.age === undefined); //false
+*/
 
 
 
