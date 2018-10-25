@@ -783,6 +783,56 @@ alert(person.age === undefined); //false
 */
 
 
+/*
+var person = {};
+
+person['first name'] = "Vasya"; //ok
+person.first name = "Vasya";//???
+*/
+
+
+/*
+var person = {}
+person.age = 25;
+var key = 'age';
+
+alert(person[key]);
+*/
+
+
+/*
+var menuSetup = {
+  width: 300,
+  'height': 200,
+  "title": "Menu"
+};
+ // ===
+var menuSetup = {};
+menuSetup.width = 300;
+menuSetup.height = 200;
+menuSetup.title = "Menu";
+*/
+
+
+/*
+var user = {
+  name: "Tanya",
+  age: 23,
+  size: {
+    top: 90,
+    middle: 60,
+    bottom: 90
+  }
+};
+
+alert(user.name);
+alert(user.size.top);
+alert(user.size);
+*/
+
+
+
+
 
 
 
