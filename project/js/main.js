@@ -846,13 +846,10 @@ var menu = {
     height: 200,
     title: "Menu"
 };
-
 counter = 0;
-
 for (var key in menu) {
   counter++;
 }
-
 alert("Всего свойств: " + counter);
 */
 
@@ -863,7 +860,6 @@ var codes = {
     "38": "Ukrain",
     "1": "USA"
 };
-
 for (var code in codes) alert(code); //1, 7, 38
 */
 
@@ -873,9 +869,7 @@ var user = {
     name: "Vasya",
     surname: "Petrov"
 };
-
 user.age = 24;
-
 for (var prop in user) alert(prop);
 */
 
@@ -886,11 +880,9 @@ var codes = {
     "+38": "Ukrain",
     "+1": "USA"
 };
-
 for (var code in codes) {
     var value = codes[code];
     code = +code;
-
     alert(code + ": " + value);
 }
 */
@@ -904,9 +896,7 @@ function isEmpty(obj) {
     }
    return (counter === 0);
 }
-
 var schedule = {};
-
 alert(isEmpty(schedule));
 */
 
@@ -917,9 +907,7 @@ var salaries = {
     "Petya": 300,
     "Dasha": 250
 };
-
 var sum = 0;
-
 for (var name in salaries) {
     sum += salaries[name];
 }
@@ -929,23 +917,19 @@ for (var name in salaries) {
 
 /*
 "use strict";
-
 var salaries = {
     "Vasya": 100,
     "Petya": 300,
     "Dasha": 250
 };
-
 var zp = 0;
 var val = "";
-
     for (var code in salaries) {
     if (salaries[code] > zp) {
         zp = salaries[code];
         val = code;
     }
 }
-
 alert(val || "no employees");
 */
 
@@ -954,13 +938,11 @@ alert(val || "no employees");
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n)
 }
-
 var menu = {
     width: 200,
     height: 300,
     title: "My menu"
 };
-
 function multiplyNumeric(men){
     for (var key in men){
         if (isNumeric(men[key])){
@@ -968,14 +950,274 @@ function multiplyNumeric(men){
         }
     }
 }
-
 multiplyNumeric(menu);
-
 alert ("menu width: " + menu.width + "\nmenu height: " + menu.height + "\nmenu title: " + menu.title);
 */
 
 
+/*
+var toLowerCase = function(str) {
+  var len = str.length;
+  var stri = "";
 
+  for (var i = 0; i < len; i++) {
+    stri += str[i].toLowerCase();
+  }
+  return stri;
+};
+
+alert (toLowerCase("ADaf"));
+*/
+
+
+/*
+var user = {
+  name: "Vasya"
+}; 
+
+var admin = user; //вторая ссылка на один и тот же объект
+
+admin.name = "Petya";
+
+alert(user.name);
+*/
+
+
+/*
+var user = {
+  name: "Vasya",
+  age: 30
+};
+
+var clone = {};
+
+for (var key in user){
+  clone[key] = user[key];
+};
+
+clone.name = "Petya";
+
+alert(user.name); //Vasya
+*/
+
+
+/*
+var fruits = ["apple", "orange", "plum"];
+
+var arr = [1, "Name", {name: "Petya"}, true];
+
+alert(arr[2].name);
+*/
+
+
+/*
+var fruits = ["apple", "orange", "pear"];
+
+alert(fruits.pop()); //deleted pear
+alert(fruits); //apple, orange 
+*/
+
+
+/*
+var fruits = ["apple", "orange"];
+
+alert(fruits.push("pear", "egg")); //4, because fruits.push(...) <=> fruits[fruits.length]
+
+alert(fruits); // apple, orange, pear, egg
+*/
+
+
+/*
+var fruits = ["apple", "orange", "pear"];
+
+alert(fruits.shift()); //deleted apple
+
+alert(fruits); //orange, pear
+*/
+
+
+/*
+var fruits = ["orange", "pear"];
+
+fruits.unshift("apple", "coconaut"); //added apple, coconaut
+
+alert(fruits);
+
+alert(fruits.unshift("strewberry")) //5, because fruits.unshift <=> fruits[fruits.length]
+*/
+
+
+/*
+function eat(arr) {
+  arr.pop();
+}
+
+var arr = ["we're not", "afraid", "of the", "gray", "wolf"];
+
+alert(arr.length); //5
+eat(arr);
+eat(arr);
+alert(arr.length); //3, в функцию массив не скопирован, а передана ссылка
+*/
+
+
+/*
+var a = [];
+a[99999] = 5;
+a.age = 25;
+*/
+
+
+/*
+var a = [];
+a[0] = 0;
+a[5] = 5;
+
+alert(a); //0,,,,,5
+*/
+
+
+// !!!!!!!!!!!!!!!!!!!
+//push/pop - quickly, shift/unshift - slowly
+
+
+/*
+var arr = [1, 2, 3, 4, 5];
+
+arr.length = 2; //shortened to 2 elements
+alert(arr);
+
+arr.length = 5; // returned old value
+alert(arr[3]); //undefined
+alert(arr); //1,2,,,
+arr.length[0]; //cleared the array
+*/
+
+
+/*
+var arr = new Array(2, 3);
+alert( arr[0] ); // 2, создан массив [2, 3], всё ок
+
+arr = new Array(2); // создаст массив [2] ?
+alert( arr[0] ); // undefined! у нас массив без элементов, длины 2
+*/
+
+
+/*
+var matrix = [
+[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]
+];
+
+alert(matrix[1][1]); //central elemnt
+*/
+
+
+/*
+var goods = [1, 23, 456, 7890, 777];
+
+function outside(arr) {
+  var len = arr.length - 1;
+  return arr[len];
+}
+
+alert(outside(goods));
+*/
+
+
+/*
+var goods = [1, "gu", 1];
+
+goods.push("computer"); 
+//goods[goods.length] = "computer";
+
+alert(goods);
+*/
+
+
+/*
+var styles = ["jazz", "bluz"];
+alert(styles);
+styles.push("rok-and-roll");
+alert(styles);
+styles[styles.length-2] = "classic";
+alert(styles);
+styles.shift();
+alert(styles);
+styles.unshift("rap", "reggae");
+alert(styles);
+*/
+
+
+/*
+var arr = ["apple", "orange", "pear", "limon"];
+
+var rand = Math.floor(Math.random() * arr.length);
+
+alert(arr[rand]);
+*/
+
+/*
+var arr = [];
+
+var i = 0;
+
+while (true) {
+  var elem = prompt("enter number",);
+  if (elem === "" || elem === null || isNaN(elem)){
+    alert("incorrect data");
+    break;
+  }
+  arr[i] = +elem;
+  i++;
+}
+
+var sum = 0;
+for (var k = 0; k <arr.length; k++){
+  sum += arr[k];
+}
+
+alert(arr);
+alert(sum);
+*/
+
+
+/*
+arr = ["test", 2, 1.5, true];
+
+function find (array, value) {
+
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] == value)
+        return i;
+      } 
+  
+  return -1;
+}
+
+alert(find(arr, ""));
+*/
+
+
+/*
+var arr = [5, 4, 1, 0, 7, -6, 3];
+
+function filterRange(arr, a, b) {
+  
+  var filtered = [];
+
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] <= b && arr[i] >= a) 
+    filtered.push(arr[i]); 
+  }
+  return filtered;
+}
+
+var fil = filterRange(arr, 2, 5);
+
+alert(fil);
+*/
 
 
 
