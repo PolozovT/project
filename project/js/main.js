@@ -840,6 +840,153 @@ delete user.name;
 */
 
 
+/*
+var menu = {
+    width: 300,
+    height: 200,
+    title: "Menu"
+};
+
+counter = 0;
+
+for (var key in menu) {
+  counter++;
+}
+
+alert("Всего свойств: " + counter);
+*/
+
+
+/*
+var codes = {
+    "7": "Russia",
+    "38": "Ukrain",
+    "1": "USA"
+};
+
+for (var code in codes) alert(code); //1, 7, 38
+*/
+
+
+/*
+var user = {
+    name: "Vasya",
+    surname: "Petrov"
+};
+
+user.age = 24;
+
+for (var prop in user) alert(prop);
+*/
+
+
+/*
+var codes = {
+    "+7": "Russia",
+    "+38": "Ukrain",
+    "+1": "USA"
+};
+
+for (var code in codes) {
+    var value = codes[code];
+    code = +code;
+
+    alert(code + ": " + value);
+}
+*/
+
+
+/*
+function isEmpty(obj) {
+    var counter = 0;
+    for (var code in obj) {
+        counter++;
+    }
+   return (counter === 0);
+}
+
+var schedule = {};
+
+alert(isEmpty(schedule));
+*/
+
+
+/*
+var salaries = {
+    "Vasya": 100,
+    "Petya": 300,
+    "Dasha": 250
+};
+
+var sum = 0;
+
+for (var name in salaries) {
+    sum += salaries[name];
+}
+ alert(sum);
+*/
+
+
+/*
+"use strict";
+
+var salaries = {
+    "Vasya": 100,
+    "Petya": 300,
+    "Dasha": 250
+};
+
+var zp = 0;
+var val = "";
+
+    for (var code in salaries) {
+    if (salaries[code] > zp) {
+        zp = salaries[code];
+        val = code;
+    }
+}
+
+alert(val || "no employees");
+*/
+
+
+/*
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+}
+
+var menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+function multiplyNumeric(men){
+    for (var key in men){
+        if (isNumeric(men[key])){
+            men[key] *= 2;
+        }
+    }
+}
+
+multiplyNumeric(menu);
+
+alert ("menu width: " + menu.width + "\nmenu height: " + menu.height + "\nmenu title: " + menu.title);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
