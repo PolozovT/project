@@ -1220,13 +1220,155 @@ alert(fil);
 */
 
 
+/*
+function eratosfen(n) {
+
+}
+*/
 
 
+/*
+functin getMaxSubSum(arr){
+  
+}
+*/
 
 
+/*
+var names = 'Masha, Petya, Marina, Vasya';
+
+var arr = names.split(', ');
+
+for (var i = 0; i < arr.length; i++) {
+  alert(arr[i] + ', you received a message');
+}
+*/
 
 
+/*
+alert("a, b, c, d".split(',', 2)); //a, b
 
+var str = "test,we 1";
+
+alert(str.split('')); //t,e,s,t,,,w,e, ,1
+*/
+
+
+/*
+var arr = ["Masha", "Petya", "Marina", "Vasya"];
+
+var str = arr.join('; ');
+
+alert(str); //Masha; Petya; Marina; Vasya
+
+alert(new Array(4).join("LoL")); //LolLolLol
+*/
+
+
+/*
+var arr = ["I", "am", "kek"];
+
+delete arr[1]; //I,,kek
+
+alert(arr[1]); //undefined
+*/
+
+
+/*
+var arr = ["I", "am", "kek"];
+
+arr.splice(1,1); //начиная с позиции 1 удалить 1 элемент
+
+alert(arr); //I,kek
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+//удалить 2 первых элемента
+//и вставить другие на их место
+arr.splice(0, 2, " You", "are");  
+
+
+alert(arr); //You,are,kek,!
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+var removed = arr.splice(0,2);
+
+alert(removed); //I,am
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+arr.splice(2, 0, "cool"); //с позиции 2 удалить 0, вставить "cool"
+
+alert(arr);
+*/
+
+
+/*
+var arr = [1, 2, 5];
+
+// начиная с позиции индексом -1 (перед последним элементом)
+// удалить 0 элементов,
+// затем вставить числа 3 и 4
+arr.splice(-1,0,3,4);
+
+alert(arr); //1,2,3,4,5
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+var arr2 = arr.slice(1,3); //elements 1,2 (without 3)
+
+alert(arr2); //am,kek
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+alert(arr.slice(1)); //all elements starting from 1
+*/
+
+
+/*
+var arr = ["I", "am", "kek", "!"];
+
+alert(arr.slice()); //entire array
+*/
+
+
+/*
+var arr = [1, 2, 15];
+
+arr.sort();
+
+alert(arr); //1,15,2 because sorts as strings
+*/
+
+
+/*
+function compareNumeric(a,b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+}
+
+var arr = [12,1,2,15];
+
+arr.sort(compareNumeric);
+
+alert(arr); //1,2,12,15
+*/
 
 
 
