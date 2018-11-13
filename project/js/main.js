@@ -1371,6 +1371,56 @@ alert(arr); //1,2,12,15
 */
 
 
+/*
+var arr = [1, 2, 3];
+arr.reverse();
+
+alert(arr); //3,2,1
+*/
+
+
+/*
+var arr = [1,2,3];
+var newArr = arr.concat(4,5);
+
+alert(newArr); //1,2,3,4,5
+*/
+
+
+/*
+arr = [1,2,3];
+
+var newArr = arr.concat([4,5],6);
+
+alert(newArr); //1,2,3,4,5,6
+*/
+
+
+/*
+var arr = [1,0,false];
+
+alert(arr.indexOf(0)); //1
+alert(arr.indexOf(true)); //-1
+*/
+
+
+
+var store = {};
+
+var items = ["div", "a", "form"];
+
+for (var i = 0; i < items.length; i++) {
+  var key = items[i];
+  store[key] = true;
+}
+
+
+
+
+
+
+
+
 
 
 
