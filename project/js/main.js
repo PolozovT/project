@@ -1404,7 +1404,7 @@ alert(arr.indexOf(true)); //-1
 */
 
 
-
+/*
 var store = {};
 
 var items = ["div", "a", "form"];
@@ -1413,14 +1413,44 @@ for (var i = 0; i < items.length; i++) {
   var key = items[i];
   store[key] = true;
 }
+*/
 
 
+/*
+var user = {
+  name: "Petya",
+  age: 30
+}
+
+var keys = Object.keys(user);
+
+alert(keys); //array properties of the object
+*/
 
 
+/*
+var obj = {
+  className: "open menu"
+}
 
 
+function addClass(object, cls) {
+  var classes = obj.className ? object.className.split(' ') : [];
+    for (var i = 0; i < classes.length; i++) {
+      if (classes[i] == cls) return; //class is already there
+    }
 
+    classes.push(cls); // add
 
+    obj.className = classes.join(' '); //update property
+
+}
+
+addClass(obj, "menu");
+addClass(obj, ", lox");
+
+alert(obj.className); //open menu , lox
+*/
 
 
 
