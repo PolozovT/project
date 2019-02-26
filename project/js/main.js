@@ -1453,8 +1453,215 @@ alert(obj.className); //open menu , lox
 */
 
 
+/*
+function camelize(str) {
+  
+}
+*/
 
 
+/*
+var hammingDistance = function(x, y) {
+   return parseInt(x^y, 10).toString(2).split('1').length - 1
+};
+
+alert(hammingDistance(1,4));//2
+*/
+
+
+/*
+var judgeCircle = function(moves) {
+  var mov = moves.split('');
+  var fin = false;
+  var movl = mov.length;
+  var koord = 0.0;
+
+  for (i = 0; i < movl; i++){
+    switch(mov[i]) {
+      case 'U':
+        koord += 1;
+      break;
+      case 'R':
+        koord += 0.1;
+      break;
+      case 'D':
+        koord -= 1;
+      break; 
+      case 'L': 
+        koord -= 0.1;
+      break;
+    }
+  }
+
+koord = Math.round(koord * 10) / 10;
+
+if (koord == 0.0) {
+  fin = true;
+} 
+
+  return fin;  
+};
+
+alert(judgeCircle("LL"));
+*/
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+/*
+if ('a' in window) {
+  var a = 1;
+}
+
+alert(a); //1
+*/
+
+
+/*
+if ('a' in window) {
+  a = 1;
+}
+
+alert(a); //error
+*/
+
+
+/*
+if ('a' in window) {
+  a = 1;
+}
+var a;
+
+alert(a); //1
+*/
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/*
+var lang = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+decodeMorse = function(morseCode){
+  mors = morseCode.split(" ");
+
+  for (var i = 0; i < mors.length; i++) {
+    var 
+  }
+  return mors;
+}
+
+document.write(decodeMorse(".... . -.--   .--- ..- -.. ."));
+*/
+
+
+/*
+var transposeMatrix = function(a) {
+  var b = [];
+
+  for (var i = 0; i < a[0].length; i++) {
+    b[i] = [];
+    for (var j = 0; j < a.length; j++) {
+      b[i][j] = a[j][i]; 
+    }
+  }
+
+  return b;
+}
+
+document.write(transposeMatrix([[1,2,3],[4,5,6]]));
+*/
+
+
+/*
+var reverseWords = function(s) {
+  var res;
+
+  res = s.split(' ');
+
+  for (var i = 0; i < res.length; i++) {
+    res[i] = res[i].split('').reverse().join('');
+  }
+
+  res = res.join(' ');
+
+  return res;    
+}
+
+document.write(reverseWords("Let's take LeetCode contest"));
+*/
+
+
+/*
+var numberOfLines = function(w, s) {
+    var col = 0, rows = 1, res, t = 0;
+
+    for (var i = 0; i <s.length; i++) {
+      col += w[s[i].charCodeAt(0) - 97];
+
+      if (col > 100) {
+        col = 0;
+        col += w[s[i].charCodeAt(0) - 97];
+        rows += 1;
+      }
+    }
+
+    res = [rows, col];
+    return res;
+};
+
+document.write(numberOfLines([10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],
+"abcdefghijklmnopqrstuvwxyz"));
+*/
+
+
+/*
+var reverseString = function(s) {
+   res = s.reverse();
+
+   return res;
+};
+
+document.write(reverseString(["h","e","l","l","o"]));
+*/
+
+
+/*
+var sortArrayByParityII = function(a) {
+  var odd = [], even = [];
+
+  for (var i = 0; i < a.length; i++) {
+    if (a[i] % 2 == 0) {even.unshift(a[i]);
+    } else {odd.unshift(a[i]); 
+    } 
+  }
+
+  for (var j = 0; j < a.length / 2; j++) {
+    a[j*2] = even[j];
+    a[j*2 + 1] = odd[j];
+  }
+
+  return a;
+};
+
+document.write(sortArrayByParityII([4, 2, 5, 7]));
+*/
+
+
+/*
+var findComplement = function(num) {
+
+  var s = num.toString(2);
+  num = [];
+
+  for ( var i = 0; i < s.length; i++) {
+    if (s[i] == 1) num[i] = 0
+      else num[i] = 1;
+  }
+
+  num = num.join('');
+
+  return (parseInt(num, 2));
+};
+
+document.write(findComplement(20161211));
+*/
 
 
 
