@@ -1663,6 +1663,398 @@ var findComplement = function(num) {
 document.write(findComplement(20161211));
 */
 
+/*
+var numJewelsInStones = function(J, S) {
+  var s = 0;
+  var jarr = J.split('');
+  var sarr = S.split('');
+
+  for (i = 0; i < jarr.length; i++){
+    for (j = 0; j <sarr.length; j++){
+      if (jarr[i] == sarr[j])
+        s+=1;
+    }
+  } 
+  return s; 
+};
+
+alert(numJewelsInStones("aA", "aAAbbbb")); //3
+*/
+
+
+/*js
+var numUniqueEmails = function(emails) {
+  var eSet = new Set();
+  var s = 0;
+  for (i = 0; i < emails.length; i++){
+    var st = emails[i];
+    var dog = st.indexOf('@');
+    fir = st.substring(0,dog);
+    sec = st.substring(dog);
+    //alert(fir);
+    //alert(sec);
+    for (j = 0; j<fir.length; j++){
+      //alert(st[j]);
+      var plus = st.indexOf('+');
+      fir = fir.substring(0,plus);
+      if (fir[j] == '.'){
+        fir = fir.substring(0,j) + fir.substring(j+1);
+      }
+    }  
+    st = fir + sec;
+    eSet.add(st);
+  }
+  return eSet.size;
+};
+
+alert(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"])); //2
+*/
+
+
+/*
+var repeatedNTimes = function(a) {
+  var kol = a.length/2;
+  for (i = 0; i < a.length; i++){
+    var s = 0;
+    for (j = 0; j < a.length; j++){
+    if (a[i]==a[j]) s +=1; 
+    }
+    if (s == kol) 
+    zifra = a[i];
+  }
+  return zifra;
+};
+
+document.write(repeatedNTimes([1,2,3,3]));//3
+*/
+
+
+/*
+function swap(items, firstIndex, secondIndex) {
+  var cont = items[firstIndex];
+  items[firstIndex] = items[secondIndex];
+  items[secondIndex] = cont;
+}
+
+function partition(a, l, r) {
+  var mid = a[~~(a.length / 2)];
+  var i = l;
+  var j = r;
+  while (i <j) {
+    while (a[i] < mid){
+      i++;
+    }
+
+    while (a[j] > mid){
+      j--;
+    }
+    
+    if (i<=j) {
+      swap(a, i, j);
+      i++;
+      j--;
+    } 
+  }
+  return i;
+}
+
+function quickSort(a, left, right) {
+  var index;
+
+  if (items.length > 1) {
+    index = partition(a, left, right)
+
+    if (left < index - 1){
+      quicksort(a, left, index-1);
+    }
+
+    if (index < right){
+      quicksort(a, index, right);
+    }
+  }
+  return a;
+}
+
+document.write(quickSort([1,2,9,4,5,52,0,45,-4], 0, 8));
+*/
+
+
+/*
+var bubbleSort = function(arr) {
+  for (i = 0; i < arr.length - 1; i++) {
+    let flag = 0;
+    for (j = 0; j < arr.length - 1 - i; j++){
+      if ( arr[j] > arr[j+1]) {
+       [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+       flag++;
+      }
+    }
+    if (flag = 0) break;
+  }
+  return arr;
+}
+
+document.write(bubbleSort([2,3,-1,44,7,1,0,4,9,5]));
+*/
+
+
+/*
+var shakeSort = function(arr) {
+
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+
+    for ( var i = left; i < right; i++) {
+      if ( arr[i] > arr[i+1]) {
+       [arr[i], arr[i+1]] = [arr[i+1], arr[i]];
+      }
+    }
+
+    right--;
+
+    for (var j = right; j > left; j--) {
+      if ( arr[j] < arr[j-1]) {
+       [arr[j], arr[j-1]] = [arr[j-1], arr[j]];
+      }
+    }
+
+    left++;
+    }
+
+  return arr;
+}
+
+document.write(shakeSort([2,3,-11,44,77,11,0,4,9,5]));
+*/
+
+
+/*
+var insertionSort = function(arr) {
+
+}
+
+document.write(insertionSort([2,33,-11,444,77,11,0,4,9,5]));
+*/
+
+
+/*
+var compareNumbers = function(a,b) {
+  return a - b;
+};
+
+var arrayPairSum = function(nums) {
+
+    nums = nums.sort(compareNumbers);
+    
+    var s = 0;
+    
+    for (i = 0; i < nums.length; i += 2) {
+      s += Math.min(nums[i], nums[i+1]);
+    }
+
+    return s;
+};
+
+document.write(arrayPairSum([1,4,3,2])); //4
+*/
+
+
+/*
+var morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."];
+
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var uniqueMorseRepresentations = function(words) {
+  var transSet = new Set;
+
+  for (i = 0; i < words.length; i++) {
+    var word = words[i];
+    var st = "";
+
+    for (j = 0; j < word.length; j++) {      
+      var e = word[j];
+      var m = alphabet.indexOf(e);
+      st += morse[m];
+    }
+    transSet.add(st);
+  } 
+  return transSet.size;
+};
+
+document.write(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"])); //2
+*/
+
+
+/*
+var sortArrayByParity = function(arr) {
+  var arr1 = [];
+
+  for (i = 0; i < arr.length; i++) {
+
+    if (arr[i] % 2 == 0) {
+      arr1.unshift(arr[i]);
+      //alert(arr[i]);
+    }
+
+    if (arr[i] % 2 != 0) {
+      arr1.push(arr[i]);
+      //alert(arr[i]);
+    }
+
+  }
+  return arr1;
+};
+
+document.write(sortArrayByParity([3,2,4,1])); //for example [2,4,3,1] 
+*/
+
+
+/* ?????????????????????????????????
+var selfDividingNumbers = function(left, right) {
+
+  var arr = [];
+
+  for (i = 0; i < right - left + 1; i++) {
+    arr[i] = left + i;
+    //alert(arr);
+  }   
+
+  var arr1 = [];
+
+  for (i = 0; i < arr.length; i++) {
+
+    var a = arr[i];
+    var flag = false;
+
+    for (j = 0; j < a.length; j++) {
+
+      if (arr[i] % a[j] != 0) {
+       flag = false
+      }
+
+      arr1.unshift(arr[i]);
+    }
+  }
+
+return arr1;
+
+};
+
+document.write(selfDividingNumbers(1,22)); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
+
+//alert("12345".split(""));
+*/
+
+
+/*
+var sortedSquares = function(A) {
+    var arr = [];
+    var len = A.length;
+
+    for (var i = 0; i < len; i++) {
+      A[i] = Math.pow(A[i],2); 
+      arr.push(A[i]);
+    };
+
+    arr.sort(function(a,b) {
+      return a - b;
+    });
+
+    return arr;
+};
+
+document.write(sortedSquares([-4,-1,0,3,10]));//[0,1,9,16,100]
+*/
+
+
+/* YANDEX!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+function Ticker(_i) {
+  this._i = 0
+};
+
+Ticker.prototype = {
+  tick: function() {
+    console.log(this._i++);
+  }
+};
+
+var _i = 100; 
+var ticker = new Ticker(_i);
+setInterval(ticker.tick, 1000);
+*/
+
+
+/*
+var flipAndInvertImage = function(A) {
+    return A.map(ele => ele.reverse().map(e => 1 ^ e))
+};
+*/
+
+
+/*
+var flipAndInvertImage = function(a) {
+  a.forEach((row, i) => {
+    a[i] = row.reverse();
+    a[i].forEach((e, j) => {
+      a[i][j] = a[i][j] ^ 1;
+    });
+  });
+  return a;
+};
+
+document.write(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]));
+*/
+
+
+/*
+var spiralMatrix = function(arr) {
+  var res;
+
+  if (arr.length == 0) {
+    res = "Matrix is empty";
+  }
+
+
+
+return res;
+}
+
+document.write(spiralMatrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));     
+*/
+
+
+/*
+var diStringMatch = function(s) {
+  var res = [], k = 1;
+
+  for (var i = 0; i < s.length + 1; i++) {
+    res[i] = i;
+  }
+
+do {
+k = 0;
+for (var j = 0; j < s.length; j++) {
+
+  if ((s[j] == "I") && (res[j] > res[j + 1])) {
+      [res[j], res[j + 1]] = [res[j + 1], res[j]];
+      k += 1;
+      continue;
+    } else  if ((s[j] == "D") && (res[j] < res[j + 1])) {
+      [res[j], res[j + 1]] = [res[j + 1], res[j]];
+      k += 1;
+      continue;
+    }
+}
+} while ( k > 0);
+
+return res;  
+}
+
+document.write(diStringMatch("DDI"));
+*/
+
 
 
 
