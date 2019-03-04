@@ -17,7 +17,7 @@ document.write(0^12.222);*/
 /*var str="hello";
 
 if (~str.indexOf("lo")){
-	alert("found!");
+  alert("found!");
 }
 
 
@@ -44,7 +44,7 @@ alert(message);
 var namejs = prompt("Официальное название js?", "");
 
 if (namejs == "EcmaScript") alert("Good")
-	else alert("no...");
+  else alert("no...");
 */
 
 
@@ -52,13 +52,13 @@ if (namejs == "EcmaScript") alert("Good")
 var admin = prompt("Кто пришел?", "");
 
 if (admin == "админ") {
-	var password = prompt("Пароль?", "");
-	if (password == "чв") alert("preveD")
-		else if (password == null) alert("вход отменен");
-		else alert("ПAKA");
+  var password = prompt("Пароль?", "");
+  if (password == "чв") alert("preveD")
+    else if (password == null) alert("вход отменен");
+    else alert("ПAKA");
 }
     else if (admin == null) alert ("вход отменен");
-	else alert("я вас не знаю");
+  else alert("я вас не знаю");
 
 result = (a+b < 4) ? "malo": "mnogo";
 */
@@ -82,8 +82,8 @@ if (!(ages>=14&&ages<=90)) alert("klevo");
 /*
 var i = 2;
 for (; i<=10; i++){
-	if(i%2==0){
-	alert(i);
+  if(i%2==0){
+  alert(i);
 }
 }
 */
@@ -101,7 +101,7 @@ while ( i < 3) {
 /*
 var ch;
 do{
-	ch=prompt("vvedi chislo > 100", "");
+  ch=prompt("vvedi chislo > 100", "");
 }
 while (ch<100 || ch==null);
 */
@@ -110,9 +110,9 @@ while (ch<100 || ch==null);
 /*
 next:
 for (var i = 1; i<10; i++){
-	for (var j=2; j<i; j++){
-		if (i%j==0) continue next;}
-		alert(i);
+  for (var j=2; j<i; j++){
+    if (i%j==0) continue next;}
+    alert(i);
 }
 */
 
@@ -123,7 +123,7 @@ var browser = prompt("Введите ваш браузер");
 if (browser=='IE') {
     alert( 'О, да у вас IE!' );}
     else if (browser=='Chrome' || browser=='Firefox' || browser=='Safari' || browser=='Opera'){
-    	alert( 'Да, и эти браузеры мы поддерживаем' );
+      alert( 'Да, и эти браузеры мы поддерживаем' );
     }
     else{
     alert( 'Мы надеемся, что и в вашем браузере все ок!' );}
@@ -168,7 +168,7 @@ function checkAge(age) {
 }
 
 function checkAge(age) {
-	return(age > 18) || confirm('Родители разрешили?');
+  return(age > 18) || confirm('Родители разрешили?');
 }
 */
 
@@ -176,9 +176,9 @@ function checkAge(age) {
 /*
 function returnMin(var a, var b){
  if (a>b){ 
- 	return b;
+  return b;
  } else {
- 	return a;
+  return a;
  }
 }
 */
@@ -186,21 +186,21 @@ function returnMin(var a, var b){
 
 /*
 function pow(x,n){
-	var pr=x;
-	for (var i=1; i<n; i++){
-		pr*=x;
-	}
-	return pr;
+  var pr=x;
+  for (var i=1; i<n; i++){
+    pr*=x;
+  }
+  return pr;
 }
 
 var x = prompt("x?",);
 var n = prompt("n?",);
 
 if (n<=1){
-	alert("данная степень не поддерживается, введите n>1");
-	}else{
-		alert(pow(x,n));
-	}
+  alert("данная степень не поддерживается, введите n>1");
+  }else{
+    alert(pow(x,n));
+  }
 */
 
 
@@ -250,11 +250,11 @@ alert( result ); // 3
 
 /*
 function pow(x,n){
-	if (n!=1){
-		return x*pow(x,n-1);
-	} else{
-		return x;
-	}
+  if (n!=1){
+    return x*pow(x,n-1);
+  } else{
+    return x;
+  }
 }
 
 alert(pow(2,5));
@@ -274,11 +274,11 @@ alert(sumTo(100));
 
 /*
 function factorial(n){
-	if (n!=1){
-		return n*factorial(n-1);
-	} else {
-		return 1;
-	}
+  if (n!=1){
+    return n*factorial(n-1);
+  } else {
+    return 1;
+  }
 }
 
 function factorial(n) {
@@ -2054,6 +2054,89 @@ return res;
 
 document.write(diStringMatch("DDI"));
 */
+
+
+/*
+var findTheDifference = function(s, t) {
+    var res = "";
+    var ss;
+
+    for (var j = 0; j < t.length; j++) {
+      ss = s.indexOf(t[j]);
+
+      if (ss > -1) {s = s.slice(0, ss) + s.slice(ss + 1);
+      } else {
+        res += t[j];
+      }
+    }
+
+    return(res);
+};
+
+document.write(findTheDifference("qwertyuiop", 
+"lqwertyuiopzhopa")); 
+*/
+
+
+/*
+var moveZeroes = function(nums) {
+  var k = 0;
+
+  for (var i = nums.length; i >= 0; i--) {
+    if (nums[i] == 0) {
+      nums.splice(i,1);
+      nums.push(0);
+    }
+  }
+
+  return nums;
+};
+
+document.write(moveZeroes([0,0,1,3,0,3]));
+*/
+
+
+
+var singleNumber = function(nums) {
+  var sch = {};
+  var res;
+
+  for (var i = 0; i < nums.length; i++) {
+    if (sch.name = nums[i]) {
+      //map.get(nums[i]) += 1;
+      alert(map.size);
+    } else {
+      map.set(num[i], 1);
+      alert(map.size);
+    }
+  }
+
+  return res;
+};
+
+document.write(singleNumber([4,1,2,1,2])); //4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
