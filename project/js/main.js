@@ -2096,25 +2096,114 @@ document.write(moveZeroes([0,0,1,3,0,3]));
 */
 
 
-
+/*
 var singleNumber = function(nums) {
   var sch = {};
   var res;
 
   for (var i = 0; i < nums.length; i++) {
-    if (sch.name = nums[i]) {
-      //map.get(nums[i]) += 1;
-      alert(map.size);
-    } else {
-      map.set(num[i], 1);
-      alert(map.size);
-    }
+    var num = nums[i];
+    sch[num] = sch[num] ? sch[num] + 1 : 1;
+  }
+  
+  for (num in sch) {
+    if (sch[num] == 1)
+      res = num;
   }
 
   return res;
 };
 
-document.write(singleNumber([4,1,2,1,2])); //4
+document.write(singleNumber([2,1,2])); //4
+*/
+
+
+/*
+var majorityElement = function(nums) {
+  var s = {};
+  var n = Math.floor(nums.length / 2);
+  var res;
+
+  for(var i = 0; i < nums.length; i++) {
+    var num = nums[i];
+    s[num] = s[num] ? s[num] + 1 : 1;
+  } 
+
+  for (num in s) {
+    if (s[num] > n)
+      res = num;
+  }
+
+  return res;
+};
+
+document.write(majorityElement([3,2,3]));
+*/
+
+
+/*
+var isMonotonic = function(a) {
+  var res;
+
+  for (var i = 1; i < a.length; i++) {
+    if (a[i] > a[i-1]) {
+      if (res == 2) return false;
+      res = 1;
+    } else if (a[i] < a[i-1]) {
+      if (res == 1) return false;
+      res = 2;
+    }
+  }
+
+  return true;
+};
+
+document.write(isMonotonic([1,3,2]));
+*/
+
+
+/*
+var getSum = function(a, b) {
+  if (a > 0) {
+    while (a != 0) {
+      b++;
+      a--;
+    }
+  } else {
+    while (a != 0) {
+      b--;
+      a++;
+    }
+  }
+
+  return b;
+};
+
+document.write(getSum(1,2));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
