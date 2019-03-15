@@ -2183,14 +2183,39 @@ document.write(getSum(1,2));
 */
 
 
+/*
+var obj = {
+  name: "Kolya",
+  toString: function() {
+    return ('IMYA: ' + this.name);
+  },
+  valueOf: function() {
+    return this.name.length;
+  }
+}
+
+alert(obj + 1);
+*/
 
 
 
+var carrySum = function(a) {
+  var currentSum = a;
+
+  function f(b) {
+    currentSum += b;
+    return f;
+  }
+
+  f.toString = function() {
+    return currentSum;
+  }
+
+  return f;
+}
 
 
-
-
-
+document.write(carrySum("a")(2)(3)(4));
 
 
 
