@@ -2197,8 +2197,8 @@ var obj = {
 alert(obj + 1);
 */
 
-
-
+//????????????????????????????????????
+/*
 var carrySum = function(a) {
   var currentSum = a;
 
@@ -2216,23 +2216,105 @@ var carrySum = function(a) {
 
 
 document.write(carrySum("a")(2)(3)(4));
+*/
 
 
+/*
+var calculator = {
+  run: function() {
+    this.a = +prompt("1 chislo", 0);
+    this.b = +prompt("2 chislo", 0);
+  },
+  sum: function() {
+    return this.a + this.b;
+  },
+  mul: function() {
+    return this.a * this.b;
+  }
+}
+
+calculator.run();
+alert(calculator.sum());
+alert(calculator.mul());
+*/
 
 
+/*
+var ladder = {
+  step: 0,
+  up: function() {
+    this.step++;
+    return this;
+  },
+  down: function() {
+    this.step--;
+    return this;
+  },
+  showStep: function() {
+    alert(this.step);
+    return this;
+  }
+};
+
+ladder.up().up().down().showStep();
+*/
 
 
+/*
+var animal = {
+  eats: true
+}
+var rabbit = {
+  jump: true
+}
+
+rabbit.__proto__ = animal;
+
+document.write(rabbit.eats);//true
+*/
 
 
+/*
+var animal = {
+  eats: true
+}
+
+var rabbit = {
+  jump: true,
+  __proto__: animal
+}
+
+for (var key in rabbit) {
+  if (!rabbit.hasOwnProperty(key)) continue;
+  document.write(key + " = " + rabbit[key] + "; "); //only jump!!!
+}
+*/
 
 
+/*
+var data = Object.create(null);
+data.text = "salam";
+
+alert(data.text); //salam
+alert(data.toString); //undefined
+*/
 
 
+/*
+var animal = {
+  eats: true
+}
 
+ function Rabbit(name) {
+  this.name = name;
+ }
 
+Rabbit.prototype = animal;
 
+var rabbit = new Rabbit("Krol");
 
-
+alert(rabbit.eats);
+*/
 
 
 
