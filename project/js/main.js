@@ -2317,34 +2317,97 @@ alert(rabbit.eats);
 */
 
 
+/*
+function spiral(arr) {
+  let res = 0;
+  f = Math.floor(arr.length/2);
+
+  while (i != 0 && j != 0) {
+    arr[f]
+  }
+
+  return res
+}
 
 
+document.write(spiral([[1,2,3],[4,5,6],[7,8,9]]));
+*/
 
 
+/*
+var counter = (function() {
+  var mc = 0;
+
+  function change(val) {
+    mc +=val;
+  }
+
+  return {
+    incr: function() {
+      change(1);
+    },
+    decrem: function() {
+      change(-1);
+    },
+    value: function() {
+      return mc;
+    }
+  };
+})();
+
+alert(counter.value());
+counter.incr();
+counter.incr();
+alert(counter.value());
+counter.decrem();
+alert(counter.value());
+counter.change(2);
+alert(counter.value());
+*/
 
 
+/*
+var x = 2;
+var y = 4;
+
+if ((y>x || y++ === 4) && ++y === 5) {
+  x = 1;
+} else {
+  x = 4;
+}
+
+alert(y);
+*/
 
 
+/*
+function f(x) {
+  x+=1;
+}
+
+function g(x) {
+  x.value *=5;
+}
+
+var a, b = 1, c ={ value: 2}, d =c;
+
+f(a);
+f(b);
+g(d);
+
+alert(c.value);
+*/
 
 
+alert(typeof a);
+alert(typeof b);
 
+function a(){
 
+}
+var b = function(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 
 
