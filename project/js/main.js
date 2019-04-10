@@ -2355,14 +2355,14 @@ var counter = (function() {
   };
 })();
 
-alert(counter.value());
+alert(counter.value());//0
 counter.incr();
 counter.incr();
-alert(counter.value());
+alert(counter.value());//2
 counter.decrem();
-alert(counter.value());
+alert(counter.value());//1
 counter.change(2);
-alert(counter.value());
+alert(counter.value());//?нельзя так обращаться
 */
 
 
@@ -2376,38 +2376,76 @@ if ((y>x || y++ === 4) && ++y === 5) {
   x = 4;
 }
 
-alert(y);
+alert(y);//5
 */
 
 
 /*
 function f(x) {
-  x+=1;
+  x += 1;
 }
 
 function g(x) {
-  x.value *=5;
+  x.value *= 5;
 }
 
-var a, b = 1, c ={ value: 2}, d =c;
+var a, b = 1, c ={value: 2}, d = c;
 
 f(a);
 f(b);
 g(d);
 
-alert(c.value);
+alert(a);//undefined
+alert(b);//1??????????
+alert(c.value); //10 === d.value
 */
 
-
-alert(typeof a);
-alert(typeof b);
-
+/*
+alert(typeof a);//fucntion
+alert(typeof b);//undefined
+//declaration
 function a(){
 
-}
+}; 
+//expression
 var b = function(){
 
 };
+alert(typeof b);//function
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
